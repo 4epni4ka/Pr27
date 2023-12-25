@@ -24,8 +24,7 @@
             <Button Background="White" Width="125" Content="Сортировка" Margin="140,0,0,10" HorizontalAlignment="Left" Height="25" VerticalAlignment="Bottom">
                 <Button.ContextMenu>
                     <ContextMenu>
-                        <MenuItem Header="По дате(сначала новые)" Click="SortDateDown"/>
-                        <MenuItem Header="По дате(сначала старые)" Click="SortDateUp"/>
+                        
                     </ContextMenu>
                 </Button.ContextMenu>
             </Button>

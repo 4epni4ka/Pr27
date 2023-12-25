@@ -24,10 +24,23 @@ namespace Cinema_Леготкин
         public static MainWindow init;
         public static List<MovieContext> AllMovie = new MovieContext().AllMovie();
         public static List<TeatrContext> AllTeatr = new TeatrContext().AllTeatr();
+        public enum pages
+        {
+            teatr,
+            movie
+        }
         public MainWindow()
         {
             InitializeComponent();
             init = this;
+            OpenPages(pages.movie);
+        }
+        public void OpenPages(pages _pages)
+        {
+            if (_pages == pages.movie)
+                frame.Navigate(new Pages.Movie());
+            if (_pages == pages.teatr)
+                frame.Navigate(new Pages.Teatr());
         }
     }
 }
