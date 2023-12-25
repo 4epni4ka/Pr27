@@ -12,6 +12,7 @@ namespace Cinema_Леготкин.Classes
         public string name { get; set; }
         public int countZal { get; set; }
         public int countMest { get; set; }
+        public Teatr() { }
         public Teatr(int id, string name, int countZal, int countMest)
         {
             this.id = id;

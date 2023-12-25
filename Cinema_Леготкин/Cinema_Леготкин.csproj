@@ -107,6 +107,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Elements\MovieItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Elements\TeatrItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -119,6 +127,12 @@
     <Compile Include="Classes\Context\TeatrContext.cs" />
     <Compile Include="Classes\Movie.cs" />
     <Compile Include="Classes\Teatr.cs" />
+    <Compile Include="Elements\MovieItem.xaml.cs">
+      <DependentUpon>MovieItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Elements\TeatrItem.xaml.cs">
+      <DependentUpon>TeatrItem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces\IMovie.cs" />
     <Compile Include="Interfaces\ITeatr.cs" />
     <Compile Include="MainWindow.xaml.cs">
@@ -168,7 +182,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Elements\" />
+    <Folder Include="Pages\Add\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DBConnection\DBConnection.csproj">

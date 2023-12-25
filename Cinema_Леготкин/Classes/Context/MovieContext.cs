@@ -10,6 +10,7 @@ namespace Cinema_Леготкин.Classes.Context
 {
     public class MovieContext: Movie, Interfaces.IMovie
     {
+        public MovieContext() { }
         public MovieContext(int id, int idTeatr, string Movie, DateTime time, int price): base(id, idTeatr, Movie, time, price) { }
         public List<MovieContext> AllMovie()
         {

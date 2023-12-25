@@ -12,6 +12,7 @@ namespace Cinema_Леготкин.Classes.Context
 {
     public class TeatrContext:Teatr, Interfaces.ITeatr
     {
+        public TeatrContext() { }
         public TeatrContext(int id, string name, int countZal, int countMest) : base(id, name, countZal, countMest) { }
         public List<TeatrContext> AllTeatr()
         {

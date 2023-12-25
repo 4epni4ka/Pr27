@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cinema_Леготкин.Classes.Context;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,6 +22,8 @@ namespace Cinema_Леготкин
     public partial class MainWindow : Window
     {
         public static MainWindow init;
+        public static List<MovieContext> AllMovie = new MovieContext().AllMovie();
+        public static List<TeatrContext> AllTeatr = new TeatrContext().AllTeatr();
         public MainWindow()
         {
             InitializeComponent();
