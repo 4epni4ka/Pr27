@@ -13,18 +13,26 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Cinema_Леготкин
+namespace Cinema_Леготкин.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для Movie.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Movie : Page
     {
-        public static MainWindow init;
-        public MainWindow()
+        public Movie()
         {
             InitializeComponent();
-            init = this;
+        }
+
+        private void AddMovie(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Exit(object sender, RoutedEventArgs e)
+        {
+            MainWindow.init.Close();
         }
     }
 }
