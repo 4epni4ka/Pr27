@@ -139,6 +139,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\Add\AddMovie.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Add\AddTeatr.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Movie.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -149,6 +157,12 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\Add\AddMovie.xaml.cs">
+      <DependentUpon>AddMovie.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Add\AddTeatr.xaml.cs">
+      <DependentUpon>AddTeatr.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Movie.xaml.cs">
       <DependentUpon>Movie.xaml</DependentUpon>
     </Compile>
@@ -181,9 +195,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Pages\Add\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\DBConnection\DBConnection.csproj">
       <Project>{1053415c-69f5-414a-8c74-1858bb58a7e9}</Project>
