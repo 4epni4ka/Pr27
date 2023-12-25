@@ -73,7 +73,7 @@ namespace Cinema_Леготкин.Pages.Add
                 newTeatr.Save(true);
                 MessageBox.Show("Кинотеатр изменён.");
             }
-            MainWindow.AllMovie = new MovieContext().AllMovie();
+            MainWindow.AllTeatr = new TeatrContext().AllTeatr();
             MainWindow.init.OpenPages(MainWindow.pages.teatr);
         }
     }

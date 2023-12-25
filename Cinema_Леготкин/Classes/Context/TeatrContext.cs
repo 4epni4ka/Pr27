@@ -36,25 +36,25 @@ namespace Cinema_Леготкин.Classes.Context
             if (Update)
             {
                 MySqlConnection connection = Connection.OpenConnection();
-                MySqlDataReader dataReader = Connection.Query("UPDATE 'cinema'.'teatr' " + "SET " +
-                    $"'name' = '{this.name}', " +
-                    $"'countzal' = '{this.countZal}', " +
-                    $"'countmest' = '{this.countMest}' " +
-                    $"WHERE ('id' = '{this.id}');", connection);
+                MySqlDataReader dataReader = Connection.Query("UPDATE cinema.teatr SET " +
+                    $"name = '{this.name}', " +
+                    $"countzal = '{this.countZal}', " +
+                    $"countmest = '{this.countMest}' " +
+                    $"WHERE id = '{this.id}';", connection);
 
                 Connection.CloseConnection(connection);
             }
             else
             {
                 MySqlConnection connection = Connection.OpenConnection();
-                MySqlDataReader dataReader = Connection.Query("INSERT INTO 'cinema'.'teatr'" +
-                "('name'," +
-                "'countzal', " +
-                "'countmest') " +
+                MySqlDataReader dataReader = Connection.Query("INSERT INTO cinema.teatr" +
+                "(name," +
+                "countzal, " +
+                "countmest) " +
                 "VALUES (" +
                 $"'{this.name}', " +
                 $"'{this.countZal}', " +
-                $"'{this.countMest}')", connection);
+                $"'{this.countMest}');", connection);
 
                 Connection.CloseConnection(connection);
             }
@@ -62,7 +62,7 @@ namespace Cinema_Леготкин.Classes.Context
         public void Delete()
         {
             MySqlConnection connection = Connection.OpenConnection();
-            Connection.Query($"DELETE FROM 'cinema'.'teatr' WHERE ('id' = '{this.id}')", connection);
+            Connection.Query($"DELETE FROM cinema.teatr WHERE id = '{this.id}';", connection);
             Connection.CloseConnection(connection);
         }
     }

@@ -24,10 +24,11 @@
             <Button Background="White" Width="125" Content="Сортировка" Margin="140,0,0,10" HorizontalAlignment="Left" Height="25" VerticalAlignment="Bottom">
                 <Button.ContextMenu>
                     <ContextMenu>
-                        
+
                     </ContextMenu>
                 </Button.ContextMenu>
             </Button>
+            <Button Click="Click_Movie" Background="White" Width="125" Content="Сеансы" Margin="270,0,0,10" HorizontalAlignment="Left" Height="25" VerticalAlignment="Bottom"/>
         </Grid>
     </Grid>
 </Page>

@@ -27,8 +27,8 @@ namespace Cinema_Леготкин.Elements
             InitializeComponent();
             Teatr = _teatr;
             Iname.Content = Teatr.name;
-            IcountZal.Content = Teatr.countZal;
-            IcountMest.Content = Teatr.countMest;
+            IcountZal.Content = "Количество залов: " + Teatr.countZal;
+            IcountMest.Content = "Количество мест: " + Teatr.countMest;
         }
         private void EditTeatr(object sender, RoutedEventArgs e)
         {
@@ -39,7 +39,7 @@ namespace Cinema_Леготкин.Elements
             Teatr.Delete();
             MessageBox.Show("Информация о зале успешно удалена.");
 
-            MainWindow.AllMovie = new MovieContext().AllMovie();
+            MainWindow.AllTeatr = new TeatrContext().AllTeatr();
             MainWindow.init.OpenPages(MainWindow.pages.teatr);
         }
     }

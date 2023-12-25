@@ -35,28 +35,32 @@ namespace Cinema_Леготкин.Classes.Context
             if (Update)
             {
                 MySqlConnection connection = Connection.OpenConnection();
-                MySqlDataReader dataReader = Connection.Query("UPDATE 'cinema'.'movie' " + "SET " +
-                    $"'idTeatr' = '{this.idTeatr}', " +
-                    $"'movie' = '{this.movie}', " +
-                    $"'time' = '{this.time}', " +
-                    $"'price' = '{this.price}' " +
-                    $"WHERE ('id' = '{this.id}');", connection);
+                string[] dateTime = this.time.ToString().Split(' ');
+                string[] date = dateTime[0].Split('.');
+                MySqlDataReader dataReader = Connection.Query("UPDATE cinema.movie " + "SET " +
+                    $"idTeatr = '{this.idTeatr}', " +
+                    $"movie = '{this.movie}', " +
+                    $"time = '{date[2] + "-" + date[1] + "-" + date[0] + " " + dateTime[1]}', " +
+                    $"price = '{this.price}' " +
+                    $"WHERE id = '{this.id}';", connection);
 
                 Connection.CloseConnection(connection);
             }
             else
             {
                 MySqlConnection connection = Connection.OpenConnection();
-                MySqlDataReader dataReader = Connection.Query("INSERT INTO 'cinema'.'movie'" +
-                "('idTeatr'," +
-                "'movie', " +
-                "'time', " +
-                "'price') " +
+                string[] dateTime = this.time.ToString().Split(' ');
+                string[] date = dateTime[0].Split('.');
+                MySqlDataReader dataReader = Connection.Query("INSERT INTO cinema.movie" +
+                "(idTeatr," +
+                "movie, " +
+                "time, " +
+                "price) " +
                 "VALUES (" +
                 $"'{this.idTeatr}', " +
                 $"'{this.movie}', " +
-                $"'{this.time}', " +
-                $"'{this.price}')", connection);
+                $"'{date[2] + "-" + date[1] + "-" + date[0] + " " + dateTime[1]}', " +
+                $"'{this.price}');", connection);
 
                 Connection.CloseConnection(connection);
             }
@@ -64,7 +68,7 @@ namespace Cinema_Леготкин.Classes.Context
         public void Delete()
         {
             MySqlConnection connection = Connection.OpenConnection();
-            Connection.Query($"DELETE FROM 'cinema'.'movie' WHERE ('id' = '{this.id}')", connection);
+            Connection.Query($"DELETE FROM cinema.movie WHERE id = '{this.id}';", connection);
             Connection.CloseConnection(connection);
         }
     }

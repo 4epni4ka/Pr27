@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cinema_Леготкин.Classes.Context;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,16 +24,27 @@ namespace Cinema_Леготкин.Pages
         public Movie()
         {
             InitializeComponent();
+            CreateUI();
         }
-
+        public void CreateUI()
+        {
+            parent.Children.Clear();
+            foreach (MovieContext movie in MainWindow.AllMovie)
+                parent.Children.Add(new Elements.MovieItem(movie));
+        }
         private void AddMovie(object sender, RoutedEventArgs e)
         {
-
+            MainWindow.init.OpenPages(MainWindow.pages.addMovie);
         }
 
         private void Exit(object sender, RoutedEventArgs e)
         {
             MainWindow.init.Close();
+        }
+
+        private void Click_Teatr(object sender, RoutedEventArgs e)
+        {
+            MainWindow.init.OpenPages(MainWindow.pages.teatr);
         }
     }
 }

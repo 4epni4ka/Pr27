@@ -9,9 +9,9 @@
     <Grid>
         <Label x:Name="Iname" Content="ФИО" FontWeight="Bold" Height="25" Width="342" Margin="10,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
         <Label x:Name="IcountZal" Content="Количество залов: " Height="25" Width="342" Margin="10,25,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-        <Label x:Name="IcountMest" Content="Количество мест: " Height="25" Width="395" Margin="357,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Label x:Name="IcountMest" Content="Количество мест: " Height="25" Width="395" Margin="357,25,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
 
-        <Button Click="EditTeatr" Content="Изменить" Height="20" Margin="0,0,105,5" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="90"/>
+        <Button Click="EditTeatr" Content="Изменить" Margin="0,55,105,5" HorizontalAlignment="Right" Width="90"/>
         <Button Click="DeleteTeatr" Content="Удалить" Height="20" Margin="0,0,10,5" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="90"/>
     </Grid>
 </UserControl>

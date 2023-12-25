@@ -27,7 +27,9 @@ namespace Cinema_Леготкин
         public enum pages
         {
             teatr,
-            movie
+            movie,
+            addMovie,
+            addTeatr
         }
         public MainWindow()
         {
@@ -41,6 +43,10 @@ namespace Cinema_Леготкин
                 frame.Navigate(new Pages.Movie());
             if (_pages == pages.teatr)
                 frame.Navigate(new Pages.Teatr());
+            if (_pages == pages.addMovie)
+                frame.Navigate(new Pages.Add.AddMovie());
+            if (_pages == pages.addTeatr)
+                frame.Navigate(new Pages.Add.AddTeatr());
         }
     }
 }

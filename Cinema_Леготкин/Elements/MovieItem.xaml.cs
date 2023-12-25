@@ -28,7 +28,9 @@ namespace Cinema_Леготкин.Elements
             Movie = _movie;
             Iname.Content = Movie.movie;
             Iteatr.Content = "Кинотеатр: " + MainWindow.AllTeatr.Find(x => x.id == Movie.idTeatr).name;
-            Itime.Content = "Дата и время сеанса: " + Movie.time.ToString("DD.mm.yyyy") + " " + Movie.time.ToString("HH:mm");
+            string[] dateTime = Movie.time.ToString().Split(' ');
+            string[] date = dateTime[0].Split('.');
+            Itime.Content = "Дата и время сеанса: " + date[0] + "." + date[1] + "." + date[2] + " " + Movie.time.ToString("HH:mm");
             Iprice.Content = "Цена: " + Movie.price + " р.";
 
         }
