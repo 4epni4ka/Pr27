@@ -13,5 +13,13 @@ namespace Cinema_Леготкин.Classes
         public string movie { get; set; }
         public DateTime time { get; set; }
         public int price { get; set; }
+        public Movie(int id, int idTeatr, string Movie, DateTime time, int price)
+        {
+            this.id = id;
+            this.idTeatr = idTeatr;
+            this.movie = Movie;
+            this.time = time;
+            this.price = price;
+        }
     }
 }
