@@ -127,10 +127,17 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\Teatr.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Pages\Movie.xaml.cs">
       <DependentUpon>Movie.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Teatr.xaml.cs">
+      <DependentUpon>Teatr.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
