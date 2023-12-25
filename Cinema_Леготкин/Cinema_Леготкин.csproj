@@ -119,6 +119,8 @@
     <Compile Include="Classes\Context\TeatrContext.cs" />
     <Compile Include="Classes\Movie.cs" />
     <Compile Include="Classes\Teatr.cs" />
+    <Compile Include="Interfaces\IMovie.cs" />
+    <Compile Include="Interfaces\ITeatr.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
