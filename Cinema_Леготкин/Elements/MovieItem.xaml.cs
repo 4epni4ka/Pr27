@@ -46,5 +46,10 @@ namespace Cinema_Леготкин.Elements
             MainWindow.AllMovie = new MovieContext().AllMovie();
             MainWindow.init.OpenPages(MainWindow.pages.movie);
         }
+
+        private void BuyMovie(object sender, RoutedEventArgs e)
+        {
+            MainWindow.init.frame.Navigate(new Pages.BuyMovie(Movie));
+        }
     }
 }

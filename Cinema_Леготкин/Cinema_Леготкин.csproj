@@ -147,6 +147,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\BuyMovie.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Movie.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -162,6 +166,9 @@
     </Compile>
     <Compile Include="Pages\Add\AddTeatr.xaml.cs">
       <DependentUpon>AddTeatr.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\BuyMovie.xaml.cs">
+      <DependentUpon>BuyMovie.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Movie.xaml.cs">
       <DependentUpon>Movie.xaml</DependentUpon>
