@@ -24,7 +24,10 @@
             <Button Background="White" Width="125" Content="Сортировка" Margin="140,0,0,10" HorizontalAlignment="Left" Height="25" VerticalAlignment="Bottom">
                 <Button.ContextMenu>
                     <ContextMenu>
-
+                        <MenuItem Header="По названию" Click="Sort_Name"/>
+                        <MenuItem Header="По кинотеатру" Click="Sort_Teatr"/>
+                        <MenuItem Header="По дате" Click="Sort_Date"/>
+                        <MenuItem Header="По цене" Click="Sort_Price"/>
                     </ContextMenu>
                 </Button.ContextMenu>
             </Button>
